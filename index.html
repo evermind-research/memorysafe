@@ -1,216 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MemorySafe by Evermind - 99.4% Forgetting Reduction</title>
+    <title>MemorySafe by Evermind Research</title>
     <style>
-        /* Evermind Brand Colors */
-        :root {
-            --evermind-blue: #2E5AAC;
-            --memorysafe-green: #4CAF50;
-            --neural-purple: #9C27B0;
-            --text-dark: #212121;
-            --bg-light: #F5F7FA;
-        }
-        
-        body {
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--bg-light);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-        
-        header {
-            background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem 0;
-        }
-        
-        .logo-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        
-        .evermind-logo {
-            color: var(--evermind-blue);
-            font-weight: 800;
-            font-size: 1.8rem;
-        }
-        
-        .memorysafe-logo {
-            color: var(--memorysafe-green);
-            font-weight: 700;
-            font-size: 1.5rem;
-            border-left: 3px solid var(--memorysafe-green);
-            padding-left: 1rem;
-        }
-        
-        .hero {
-            text-align: center;
-            padding: 4rem 2rem;
-            background: linear-gradient(135deg, #2E5AAC 0%, #9C27B0 100%);
-            color: white;
-            border-radius: 10px;
-            margin: 2rem 0;
-        }
-        
-        .breakthrough-badge {
-            display: inline-block;
-            background: var(--memorysafe-green);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            margin: 1rem 0;
-        }
-        
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin: 3rem 0;
-        }
-        
-        .result-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        
-        .result-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--evermind-blue);
-            margin: 0.5rem 0;
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-            border-top: 1px solid #ddd;
-            color: #666;
-        }
-        
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            .logo-header {
-                flex-direction: column;
-                text-align: center;
-                gap: 0.5rem;
-            }
-            
-            .memorysafe-logo {
-                border-left: none;
-                border-top: 3px solid var(--memorysafe-green);
-                padding-left: 0;
-                padding-top: 0.5rem;
-            }
-        }
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+        .evermind { color: #2E5AAC; font-weight: bold; }
+        .memorysafe { color: #4CAF50; font-weight: bold; }
     </style>
-    <!-- Add Inter font from Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo-header">
-                <div class="evermind-logo">EVERMIND RESEARCH</div>
-                <div class="memorysafe-logo">MemorySafe™</div>
-            </div>
-        </div>
-    </header>
+    <h1 class="evermind">Evermind Research</h1>
+    <h2 class="memorysafe">MemorySafe: 99.4% Forgetting Reduction</h2>
     
-    <main class="container">
-        <section class="hero">
-            <h1 style="font-size: 2.5rem; margin-bottom: 1rem;">
-                AI That Remembers. Forever.
-            </h1>
-            <div class="breakthrough-badge">
-                99.4% CATastrophic Forgetting Reduction
-            </div>
-            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto;">
-                Breakthrough research by Carla Centeno achieving unprecedented memory protection in AI systems
-            </p>
-        </section>
-        
-        <section>
-            <h2 style="color: var(--evermind-blue); text-align: center;">
-                The MemorySafe Breakthrough
-            </h2>
-            
-            <div class="results-grid">
-                <div class="result-card">
-                    <div class="result-number">99.4%</div>
-                    <h3>Forgetting Reduction</h3>
-                    <p>From 34.8% to just 0.2% forgetting rate</p>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">6/6</div>
-                    <h3>Datasets Validated</h3>
-                    <p>MNIST, Fashion-MNIST, CIFAR-10, CIFAR-100, Omniglot, Permuted MNIST</p>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">850/850</div>
-                    <h3>Memories Protected</h3>
-                    <p>Perfect protection rate across all experiments</p>
-                </div>
-                
-                <div class="result-card">
-                    <div class="result-number">100%</div>
-                    <h3>Generalizability</h3>
-                    <p>Domain independence proven across data types</p>
-                </div>
-            </div>
-        </section>
-        
-        <section style="background: white; padding: 2rem; border-radius: 8px; margin: 3rem 0;">
-            <h2 style="color: var(--memorysafe-green);">About the Research</h2>
-            <p><strong>Inventor:</strong> Carla Centeno</p>
-            <p><strong>Date:</strong> December 2025</p>
-            <p><strong>Core Innovation:</strong> Memory Vulnerability Index (MVI) with 0.7 protection threshold</p>
-            <p><strong>Status:</strong> Open-source research with timestamped proof on GitHub</p>
-            
-            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="https://github.com/evermind-research/memorysafe" 
-                   style="background: var(--evermind-blue); color: white; padding: 0.8rem 1.5rem; 
-                          border-radius: 5px; text-decoration: none; font-weight: 600;">
-                    View on GitHub
-                </a>
-                <a href="#contact" 
-                   style="background: var(--memorysafe-green); color: white; padding: 0.8rem 1.5rem; 
-                          border-radius: 5px; text-decoration: none; font-weight: 600;">
-                    Contact Researcher
-                </a>
-            </div>
-        </section>
-    </main>
+    <p>Breakthrough AI research by Carla Centeno</p>
+    
+    <h3>Results:</h3>
+    <ul>
+        <li>99.4% catastrophic forgetting reduction</li>
+        <li>100% success across 6 datasets</li>
+        <li>850/850 memories protected</li>
+        <li>Domain independence proven</li>
+    </ul>
+    
+    <p>GitHub: <a href="https://github.com/evermind-research/memorysafe">evermind-research/memorysafe</a></p>
     
     <footer>
-        <div class="container">
-            <p>© 2025 Evermind Research. MemorySafe™ is a breakthrough in continual learning AI.</p>
-            <p>This website is hosted on GitHub Pages. Last updated: December 8, 2025</p>
-            <p style="font-size: 0.9rem; color: #888; margin-top: 1rem;">
-                This research establishes timestamped priority for the MemorySafe invention.
-            </p>
-        </div>
+        <p>© 2025 Evermind Research. Timestamped: Dec 8, 2025</p>
     </footer>
 </body>
 </html>
