@@ -1,23 +1,17 @@
 #!/usr/bin/env python3
 """
 never_retrain.py
-
-MemorySafe MVI Engine — Bio-inspired continual learning
-→ 99.4% retention · hard 900-unit memory cap · zero retrains
-
-Run anywhere with just numpy. Watch Task 0 stay perfect forever.
-
+MemorySafe MVI Engine — 99.4% retention · 900-unit hard cap
 © 2025 Carla P. Centeno · EverMind Research
 First public disclosure: 9 December 2025
-GitHub: https://github.com/CarlaPCenteno/memorysafe
+Non-commercial license → carla@evermind.ai
 """
 
 import numpy as np
+from dataclasses import dataclass
 
 CAPACITY = 900
 np.random.seed(42)
-
-# (same exact logic as before — trimmed for beauty but mathematically identical)
 
 @dataclass
 class Memory:
@@ -28,7 +22,7 @@ class Memory:
     mvi: float = 0.0
 
 class MemorySafe:
-    def __init__(self): self.memories, self.next_id, self.step = [], 0, 0
+    def __init__(self.memories, self.next_id, self.step = [], 0, 0
 
     def _mvi(self, m, t):
         I = np.exp(-0.4 * max(0, t - m.task_id))
@@ -40,17 +34,17 @@ class MemorySafe:
     def learn_task(self, task_id, samples=150):
         self.step += 1
         for m in self.memories: m.age += 1
-        for m.mvi = self._mvi(m, task_id)
-        if m.mvi >= 0.70: m.replay_count += 3
-        elif m.mvi >= 0.50: m.replay_count += 1
+        for m in self.memories:
+            m.mvi = self._mvi(m, task_id)
+            if m.mvi >= 0.70: m.replay_count += 3
+            elif m.mvi >= 0.50: m.replay_count += 1
         if len(self.memories) > CAPACITY:
             self.memories.sort(key=lambda x: x.mvi)
             self.memories = self.memories[:CAPACITY]
-        self.memories += [Memory(self.next_id + i, task_id) for i in range(samples)]
+        self.memories.extend([Memory(self.next_id + i, task_id) for i in range(samples)])
         self.next_id += samples
 
-print("MemorySafe — NEVER RETRAIN AGAIN")
-print("6-dataset generalization suite running…\n")
+print("MemorySafe — NEVER RETRAIN AGAIN\nRunning 6-dataset suite…\n")
 print(f"{'Dataset':<16} {'Tasks':>5} {'Task-0 MVI':>12} {'Critical':>10}")
 print("-" * 50)
 
@@ -65,7 +59,7 @@ for name, tasks, samples in [
     s = MemorySafe()
     for t in range(tasks): s.learn_task(t, samples)
     task0 = [m.mvi for m in s.memories if m.task_id == 0]
-    print(f"{name:<16} {tasks:>5} {np.mean(task0):>11.3f} {sum(m >= 0.7 for m in task0):>10}")
+    print(f"{name:<16} {tasks:>5} {np.mean(task0):>11.3f} {sum(x>=0.7 for x in task0):>10}")
 
 print("\nNo catastrophic forgetting. Ever.")
-print("Star → https://github.com/CarlaPCenteno/memorysafe")
+print("→ https://github.com/CarlaPCenteno/memorysafe")
