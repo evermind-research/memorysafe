@@ -1,3 +1,6 @@
+© 2025 Carla P. Centeno · First public disclosure: 8 December 2025
+Non-commercial license — commercial use requires contact
+
 # MemorySafe: 99.4% Catastrophic Forgetting Reduction
 
 **Inventor:** Carla Centeno  
