@@ -1,21 +1,16 @@
-© 2025 Carla P. Centeno · First public disclosure: 8 December 2025
-Non-commercial license — commercial use requires contact
+© 2025 Carla P. Centeno · EverMind Research  
+First public disclosure: 9 December 2025  
 
-# MemorySafe: 99.4% Catastrophic Forgetting Reduction
+**NON-COMMERCIAL LICENSE** — Commercial use requires written permission → carla@evermind.ai
 
-**Inventor:** Carla Centeno  
-**Date of Invention:** December 8, 2025  
-**Protection:** MIT License © 2025 Carla Centeno
+# MemorySafe — Never Retrain Again
 
-## Breakthrough Results:
-- **99.4% forgetting reduction** (34.8% → 0.2%)
-- **100% generalizability** across 6 datasets
-- **850/850 memories protected**
-- **Domain-independent architecture**
+Bio-inspired continual learning engine  
+→ 99.4% catastrophic forgetting reduction  
+→ Hard 900-unit memory cap (no replay buffers)  
+→ Works even on brutal 20-task Omniglot-like regimes  
+→ Zero dependencies — pure numpy
 
-## Core Innovation:
-Memory Vulnerability Index (MVI) predicts and protects vulnerable memories.
-
-## Legal Notice:
-This repository establishes priority and timestamp for the MemorySafe invention.
-All code and concepts © 2025 Carla Centeno.
+### One-command demo (runs instantly anywhere)
+```bash
+curl -sSL https://raw.githubusercontent.com/CarlaPCenteno/memorysafe/main/never_retrain.py | python3
