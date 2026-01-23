@@ -1,6 +1,68 @@
 {
-  "invention": "MemorySafe",
-  "inventor": "Carla Centeno",
-  "date": "2025-12-08",
-  "forgetting_reduction": "99.4%"
+  "policy": {
+    "name": "MemorySafe",
+    "memory_capacity": 2000,
+    "version": "unchanged_policy_no_dataset_tuning"
+  },
+  "benchmarks": [
+    {
+      "dataset": "MNIST",
+      "tasks": 5,
+      "task0_protection_rate": 1.0,
+      "task0_mvi": 0.750,
+      "status": "PASS"
+    },
+    {
+      "dataset": "Fashion-MNIST",
+      "tasks": 5,
+      "task0_protection_rate": 1.0,
+      "task0_mvi": 0.750,
+      "status": "PASS"
+    },
+    {
+      "dataset": "CIFAR-10",
+      "tasks": 5,
+      "task0_protection_rate": 1.0,
+      "task0_mvi": 0.749,
+      "status": "PASS"
+    },
+    {
+      "dataset": "CIFAR-100",
+      "tasks": 10,
+      "task0_protection_rate": 1.0,
+      "task0_mvi": 0.752,
+      "status": "PASS"
+    },
+    {
+      "dataset": "Omniglot",
+      "tasks": 20,
+      "task0_protection_rate": 1.0,
+      "task0_mvi": 0.751,
+      "status": "PASS"
+    },
+    {
+      "dataset": "Permuted MNIST",
+      "tasks": 10,
+      "task0_protection_rate": 1.0,
+      "task0_mvi": 0.751,
+      "status": "PASS"
+    },
+    {
+      "dataset": "PneumoniaMNIST",
+      "tasks": "continual_stream",
+      "critical_recall": 0.917,
+      "crr": 0.045,
+      "baseline_critical_recall": {
+        "fifo": 0.833,
+        "reservoir": 0.850,
+        "frequency": 0.667
+      },
+      "status": "PASS"
+    }
+  ],
+  "summary": {
+    "datasets_tested": 7,
+    "datasets_passed": 7,
+    "claim": "Unchanged MemorySafe policy achieved full Task-0 protection across classification benchmarks and preserved rare-class performance on medical imaging."
+  }
 }
