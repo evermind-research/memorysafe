@@ -1,6 +1,13 @@
 # MemorySafe Labs  
 **Memory Governance for Continual Learning Systems**
 
+## 🚀 Public Demo (Colab)
+
+Run the MemorySafe public demo comparing MemorySafe-Taste vs FIFO:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MemorySafe-Labs/memorysafe/blob/main/benchmarks/Taste_Demo_MemorySafe_Taste_vs_FIFO_%20(1).ipynb)
+
+
 MemorySafe is a memory governance framework for continual learning systems, designed to prevent safety-critical information from being forgotten under memory and compute constraints.
 
 Rather than modifying how models learn, MemorySafe governs **what they retain**.
