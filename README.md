@@ -5,7 +5,9 @@
 
 Run the MemorySafe public demo comparing MemorySafe-Taste vs FIFO:
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/MemorySafe-Labs/memorysafe/blob/main/benchmarks/Taste_Demo_MemorySafe_Taste_vs_FIFO.ipynb)
+🚀 Public Demo (Colab)
+
+https://colab.research.google.com/github/MemorySafe-Labs/memorysafe/blob/main/benchmarks/Taste_demo_v2/demo.ipynb
 
 
 
